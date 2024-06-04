@@ -44,21 +44,15 @@ public class Champion {
 
 	public void useSanctuary(Sanctuary sanctuary) {
 		if (sanctuaryProbability()){
+			System.out.println(name + " successfully used sanctuary");
 			defense += sanctuary.getDefense();
+		}else{
+			System.out.println(name + " failed to use sanctuary");
 		}
 	}
 
-	public int attack(Champion target) {
-		int damage = this.attack + this.weapon.getAttackPower() - target.defense;
-		if (damage < 0) {
-			damage = 0;
-		}
-		target.takeDamage(damage);
-		return damage;
-	}
-
-	public int calculateDamage(Champion target) {
-		return this.attack(target);
+	public int getHp() {
+		return hp;
 	}
 
 }

@@ -13,8 +13,8 @@ public class Game {
 	Weapon sword;
 
 	public Game() {
-		baston = new Weapon("Bastón", 74, TypeDamage.MAGIC);
-		wizard = new Wizard("Wizard", 200, 15, 10, 20, baston);
+		baston = new Weapon("Bastón", 60, TypeDamage.MAGIC);
+		wizard = new Wizard("Wizard", 178, 15, 15, 20, baston);
 
 		sword = new Weapon("Sword", 20, TypeDamage.PHYSICAL);
 		warrior = new Warrior("Warrior", 300, 30, 15, 20, sword);
@@ -29,6 +29,7 @@ public class Game {
 		warrior.useSanctuary(sanctuary);
 
 		while (warrior.isAlive() && wizard.isAlive()) {
+			System.out.println("Turno de " + attacker.name);
 			attackTurn(attacker, defender);
 			Champion temp = attacker;
 			attacker = defender;
@@ -39,6 +40,7 @@ public class Game {
 
 	private void attackTurn(Champion ChampionAttacks, Champion ChampionDefends) {
 		int damage = ChampionAttacks.attack + ChampionAttacks.weapon.getAttackPower() - ChampionDefends.defense;
+		System.out.println(ChampionAttacks.name + " attacks " + ChampionDefends.name + " with " + damage + " damage");
 		if (damage < 0) {
 			damage = 0;
 		}

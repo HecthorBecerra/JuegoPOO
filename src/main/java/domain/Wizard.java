@@ -9,6 +9,7 @@ public class Wizard extends Champion {
 
 		public int attack(Champion enemy) {
 			int damage = this.attack + this.magicPower + this.weapon.getAttackPower() - this.defense;
+			System.out.println(name + " attacks " + enemy.name + " with " + damage + " damage");
 			if (damage < 0) {
 				damage = 0;
 			}
