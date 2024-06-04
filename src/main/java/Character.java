@@ -1,13 +1,11 @@
 public class Character {
-	private String _name;
-	private int _hp;
-	private int _attack;
-	private int _defense;
-	private Weapon _weapon;
-	private Potion _potion;
-	public Sanctuary _unnamed_Sanctuary_;
-	public Weapon _unnamed_Weapon_;
-	public Potion _unnamed_Potion_;
+	private String name;
+	private int hp;
+	private int attack;
+	private int defense;
+	private Weapon weapon;
+	private Potion potion;
+	public Sanctuary sanctuary;
 
 	public void takeDamage(int aDamage) {
 		throw new UnsupportedOperationException();

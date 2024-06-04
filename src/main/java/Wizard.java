@@ -1,5 +1,5 @@
 public class Wizard extends Character {
-	private int _magicPower;
+	private int magicPower;
 
 	public int attack(Character aCharacter) {
 		throw new UnsupportedOperationException();

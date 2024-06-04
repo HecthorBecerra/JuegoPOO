@@ -1,5 +1,5 @@
 public class Warrior extends Character {
-	private int _strength;
+	private int strength;
 
 	public int attack(Character aCharacter) {
 		throw new UnsupportedOperationException();

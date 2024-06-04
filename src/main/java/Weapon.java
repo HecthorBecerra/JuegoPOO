@@ -1,10 +1,10 @@
 public class Weapon {
-	private String _name;
-	private int _attackPower;
-	private TypeDamage _typeDamage;
-	public Character _unnamed_Character_;
+	private String name;
+	private int attackPower;
+	private TypeDamage typeDamage;
+	public Character character;
 
 	public int getAttackPower() {
-		return this._attackPower;
+		return this.attackPower;
 	}
 }
