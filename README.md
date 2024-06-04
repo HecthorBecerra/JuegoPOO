@@ -1,8 +1,8 @@
-# Project Title
+# Java RPG Console Game
 
-Java RPG Console Game
+## Integrantes
 
-## Integrantes: Arturo Rivas, Hector Becerra
+Arturo Rivas, Hector Becerra
 
 ## Class Diagram
 
