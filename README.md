@@ -6,5 +6,5 @@ Arturo Rivas, Hector Becerra
 
 ## Class Diagram
 
-![Class Diagram](class.jpg)
+![Class Diagram](DiagramaJuegoPOO.png)
 
