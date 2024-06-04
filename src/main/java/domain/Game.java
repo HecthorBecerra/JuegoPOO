@@ -3,36 +3,44 @@ import java.util.Random;
 
 public class Game {
 
-	public void startCombat(Champion aChampion1, Champion aChampion2) {
-		Champion attacker = aChampion1;
-		Champion defender = aChampion2;
-		while (aChampion1.isAlive() && aChampion2.isAlive()) {
+	Wizard wizard;
+	Warrior warrior;
+
+	public Game() {
+		wizard = new Wizard("Wizard", 100, 10, 5, 10);
+		warrior = new Warrior("Warrior", 100, 10, 5, 10);
+	}
+
+	public void startCombat() {
+		Champion attacker = warrior;
+		Champion defender = wizard;
+		while (warrior.isAlive() && wizard.isAlive()) {
 			attackTurn(attacker, defender);
 			Champion temp = attacker;
 			attacker = defender;
 			defender = temp;
 		}
-		declareWinner(aChampion1, aChampion2);
+		declareWinner(warrior, wizard);
 	}
 
-	private void attackTurn(Champion aChampionAttacks, Champion aChampionDefends) {
+	private void attackTurn(Champion ChampionAttacks, Champion ChampionDefends) {
 		Random random = new Random();
-		int damage = aChampionAttacks.attack + aChampionAttacks.weapon.getAttackPower() - aChampionDefends.defense;
+		int damage = ChampionAttacks.attack + ChampionAttacks.weapon.getAttackPower() - ChampionDefends.defense;
 		if (damage < 0) {
 			damage = 0;
 		}
-		aChampionDefends.takeDamage(damage);
+		ChampionDefends.takeDamage(damage);
 	}
 
-	private void declareWinner(Champion aChampion1, Champion aChampion2) {
-		if (aChampion1.isAlive()) {
-			System.out.println(aChampion1.name + " wins!");
+	private void declareWinner(Champion Champion1, Champion Champion2) {
+		if (Champion1.isAlive()) {
+			System.out.println(Champion1.name + " wins!");
 		} else {
-			System.out.println(aChampion2.name + " wins!");
+			System.out.println(Champion2.name + " wins!");
 		}
 	}
 
-	public void showMenu(Champion aChampion1, Champion aChampion2) {
+	public void showMenu(Champion Champion1, Champion Champion2) {
 		System.out.println("1. Attack");
 		System.out.println("2. Use potion");
 		System.out.println("3. Use sanctuary");
