@@ -7,7 +7,7 @@ public class Champion {
 	protected int defense;
 	protected Weapon weapon;
 	protected Potion potion;
-	protected Sanctuary sanctuary;
+
 
 	public Champion(String name, int hp, int attack, int defense) {
 		this.name = name;
@@ -32,10 +32,7 @@ public class Champion {
 	}
 
 	private boolean calculateLifeForPotion() {
-		if (hp < 20){
-			return true;
-		}
-        return false;
+        return hp < 20;
     }
 
 	public void usePotion() {
@@ -43,40 +40,32 @@ public class Champion {
 			hp += potion.getHealing();
 		}
 	}
+
+	private boolean sanctuaryProbability() {
+		return Math.random() < 0.2;
+	}
+
+	public void useSanctuary(Sanctuary sanctuary) {
+		if (sanctuaryProbability()){
+			defense += sanctuary.getDefense();
+		}
+	}
+
+	public int attack(Champion target) {
+		int damage = this.attack + this.weapon.getAttackPower() - target.defense;
+		if (damage < 0) {
+			damage = 0;
+		}
+		target.takeDamage(damage);
+		return damage;
+	}
+
+	public int calculateDamage(Champion target) {
+		return this.attack(target);
+	}
+
 }
 
 
 
 
-	/*public void takeDamage(int aDamage) {
-		throw new UnsupportedOperationException();
-	}
-
-	public boolean isAlive() {
-		throw new UnsupportedOperationException();
-	}
-
-	private boolean calculateLifeForPotion() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void usePotion() {
-		throw new UnsupportedOperationException();
-	}
-
-	private boolean sanctuaryProbability() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void useSanctuary(Sanctuary aSanctuary) {
-		throw new UnsupportedOperationException();
-	}
-
-	public int attack(Champion aCharacter) {
-		throw new UnsupportedOperationException();
-	}
-
-	public int calculateDamage(Champion aCharacter) {
-		throw new UnsupportedOperationException();
-	}
-}*/
