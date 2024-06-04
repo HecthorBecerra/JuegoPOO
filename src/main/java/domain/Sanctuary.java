@@ -1,15 +1,12 @@
 package domain;
 class Sanctuary {
-	private String name;
 	private int extraDefense;
-
-
-	public Sanctuary(String name, int extraDefense) {
-		this.name = name;
+	
+	public Sanctuary(int extraDefense) {
 		this.extraDefense = extraDefense;
 	}
 
 	public int getDefense() {
-		return this.extraDefense;
+		return extraDefense;
 	}
 }

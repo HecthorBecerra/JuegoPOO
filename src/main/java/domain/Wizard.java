@@ -3,7 +3,7 @@ public class Wizard extends Champion {
 		private int magicPower;
 
 		public Wizard(String name, int hp, int attack, int defense, int magicPower) {
-			super(name, hp, attack, defense);
+			super(name, hp, attack, defense, new Weapon("Baston", 200, TypeDamage.MAGIC));
 			this.magicPower = magicPower;
 		}
 

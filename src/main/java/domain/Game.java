@@ -1,5 +1,6 @@
 package domain;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Game {
 
@@ -9,6 +10,10 @@ public class Game {
 	public Game() {
 		wizard = new Wizard("Wizard", 100, 10, 5, 10);
 		warrior = new Warrior("Warrior", 100, 10, 5, 10);
+		Sanctuary sanctuary = new Sanctuary(10);
+
+		wizard.useSanctuary(sanctuary);
+		warrior.useSanctuary(sanctuary);
 	}
 
 	public void startCombat() {
@@ -24,7 +29,6 @@ public class Game {
 	}
 
 	private void attackTurn(Champion ChampionAttacks, Champion ChampionDefends) {
-		Random random = new Random();
 		int damage = ChampionAttacks.attack + ChampionAttacks.weapon.getAttackPower() - ChampionDefends.defense;
 		if (damage < 0) {
 			damage = 0;
@@ -43,9 +47,8 @@ public class Game {
 	public void showMenu(Champion Champion1, Champion Champion2) {
 		System.out.println("1. Attack");
 		System.out.println("2. Use potion");
-		System.out.println("3. Use sanctuary");
-		System.out.println("4. Change weapon");
-		System.out.println("5. Exit");
+		System.out.println("3. Change weapon");
+		System.out.println("4. Exit");
 	}
 }
 

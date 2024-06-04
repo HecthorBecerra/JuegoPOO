@@ -3,7 +3,7 @@ public class Warrior extends Champion {
 	private final int strength;
 
 	public Warrior(String name,int hp,int attack,int defense, int strength) {
-		super(name, hp, attack, defense);
+		super(name, hp, attack, defense, new Weapon("Sword", 20, TypeDamage.PHYSICAL));
 		this.strength = strength;
 	}
 

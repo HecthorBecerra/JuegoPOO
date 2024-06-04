@@ -9,16 +9,13 @@ public class Champion {
 	protected Potion potion;
 
 
-	public Champion(String name, int hp, int attack, int defense) {
+	public Champion(String name, int hp, int attack, int defense, Weapon weapon) {
 		this.name = name;
 		this.hp = hp;
 		this.attack = attack;
 		this.defense = defense;
+		this.weapon = weapon;
 	}
-
-    public void takeDamage(Champion target) {
-
-    }
 
     public void takeDamage(int Damage){
 		this.hp -= Damage;
@@ -41,7 +38,7 @@ public class Champion {
 		}
 	}
 
-	private boolean sanctuaryProbability() {
+	public boolean sanctuaryProbability() {
 		return Math.random() < 0.2;
 	}
 
