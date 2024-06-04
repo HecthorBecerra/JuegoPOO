@@ -1,4 +1,5 @@
-public class Sanctuary {
+package domain;
+class Sanctuary {
 	private String name;
 	private int extraDefense;
 	public Character character;

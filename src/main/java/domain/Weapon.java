@@ -1,3 +1,4 @@
+package domain;
 public class Weapon {
 	private String name;
 	private int attackPower;

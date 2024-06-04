@@ -44,7 +44,6 @@ public class Character {
 			hp += potion.getHealing();
 		}
 	}
-
 }
 
 
@@ -81,4 +80,4 @@ public class Character {
 	public int calculateDamage(Character aCharacter) {
 		throw new UnsupportedOperationException();
 	}
-}/*
+}*/
