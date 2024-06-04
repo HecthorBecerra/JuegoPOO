@@ -4,21 +4,30 @@ import java.util.Scanner;
 
 public class Game {
 
+	Sanctuary sanctuary;
+
 	Wizard wizard;
+	Weapon baston;
+
 	Warrior warrior;
+	Weapon sword;
 
 	public Game() {
-		wizard = new Wizard("Wizard", 100, 10, 5, 10);
-		warrior = new Warrior("Warrior", 100, 10, 5, 10);
-		Sanctuary sanctuary = new Sanctuary(10);
+		baston = new Weapon("Bastón", 74, TypeDamage.MAGIC);
+		wizard = new Wizard("Wizard", 200, 15, 10, 20, baston);
 
-		wizard.useSanctuary(sanctuary);
-		warrior.useSanctuary(sanctuary);
+		sword = new Weapon("Sword", 20, TypeDamage.PHYSICAL);
+		warrior = new Warrior("Warrior", 300, 30, 15, 20, sword);
+		sanctuary = new Sanctuary(10);
 	}
 
 	public void startCombat() {
 		Champion attacker = warrior;
 		Champion defender = wizard;
+
+		wizard.useSanctuary(sanctuary);
+		warrior.useSanctuary(sanctuary);
+
 		while (warrior.isAlive() && wizard.isAlive()) {
 			attackTurn(attacker, defender);
 			Champion temp = attacker;
