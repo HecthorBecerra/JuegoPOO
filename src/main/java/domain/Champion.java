@@ -1,7 +1,6 @@
 package domain;
-import java.util.Random;
 
-public class Character {
+public class Champion {
 	protected String name;
 	protected int hp;
 	protected int attack;
@@ -10,14 +9,14 @@ public class Character {
 	protected Potion potion;
 	protected Sanctuary sanctuary;
 
-	public Character(String name, int hp, int attack, int defense) {
+	public Champion(String name, int hp, int attack, int defense) {
 		this.name = name;
 		this.hp = hp;
 		this.attack = attack;
 		this.defense = defense;
 	}
 
-    public void takeDamage(Character target) {
+    public void takeDamage(Champion target) {
 
     }
 
@@ -73,11 +72,11 @@ public class Character {
 		throw new UnsupportedOperationException();
 	}
 
-	public int attack(Character aCharacter) {
+	public int attack(Champion aCharacter) {
 		throw new UnsupportedOperationException();
 	}
 
-	public int calculateDamage(Character aCharacter) {
+	public int calculateDamage(Champion aCharacter) {
 		throw new UnsupportedOperationException();
 	}
 }*/

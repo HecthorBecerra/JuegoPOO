@@ -2,7 +2,7 @@ package domain;
 class Sanctuary {
 	private String name;
 	private int extraDefense;
-	public Character character;
+	public Champion champion;
 
 	public void getDefense() {
 		throw new UnsupportedOperationException();

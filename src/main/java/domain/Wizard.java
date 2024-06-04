@@ -1,5 +1,5 @@
 package domain;
-public class Wizard extends Character {
+public class Wizard extends Champion {
 		private int magicPower;
 
 		Wizard(String name, int hp, int attack, int defense, int magicPower) {
@@ -7,11 +7,11 @@ public class Wizard extends Character {
 			this.magicPower = magicPower;
 		}
 
-		public int attack(Character aCharacter) {
+		public int attack(Champion aChampion) {
 			throw new UnsupportedOperationException();
 		}
 
-		public int calculateDamage(Character aCharacter) {
+		public int calculateDamage(Champion aChampion) {
 			throw new UnsupportedOperationException();
 		}
 }

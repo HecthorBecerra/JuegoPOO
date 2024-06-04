@@ -2,7 +2,7 @@ package domain;
 public class Potion {
 	private String name;
 	private int healing;
-	public Character character;
+	public Champion champion;
 
 	public int getHealing() {
 		return this.healing;

@@ -1,5 +1,5 @@
 package domain;
-public class Warrior extends Character {
+public class Warrior extends Champion {
 
 	private int strength;
 
@@ -8,11 +8,11 @@ public class Warrior extends Character {
 		this.strength = strength;
 	}
 
-	public int attack(Character aCharacter) {
+	public int attack(Champion aChampion) {
 		throw new UnsupportedOperationException();
 	}
 
-	public int calculateDamage(Character aCharacter) {
+	public int calculateDamage(Champion aChampion) {
 		throw new UnsupportedOperationException();
 	}
 }
