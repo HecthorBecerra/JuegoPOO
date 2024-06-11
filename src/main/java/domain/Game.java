@@ -14,10 +14,10 @@ public class Game {
 
 	public Game() {
 		baston = new Weapon("Bastón", 60, TypeDamage.MAGIC);
-		wizard = new Wizard("Wizard", 178, 15, 15, 20, baston);
+		wizard = new Wizard("Wizard", 178, 15, 15, 20);
 
 		sword = new Weapon("Sword", 20, TypeDamage.PHYSICAL);
-		warrior = new Warrior("Warrior", 300, 30, 15, 20, sword);
+		warrior = new Warrior("Warrior", 300, 30, 15, 20);
 		sanctuary = new Sanctuary(10);
 	}
 

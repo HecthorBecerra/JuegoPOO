@@ -2,8 +2,8 @@ package domain;
 public class Warrior extends Champion {
 	private final int strength;
 
-	public Warrior(String name,int hp,int attack,int defense, int strength, Weapon weapon) {
-		super(name, hp, attack, defense, weapon);
+	public Warrior(String name,int hp,int attack,int defense, int strength) {
+		super(name, hp, attack, defense);
 		this.strength = strength;
 	}
 

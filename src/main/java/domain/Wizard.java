@@ -2,8 +2,8 @@ package domain;
 public class Wizard extends Champion {
 		private int magicPower;
 
-		public Wizard(String name, int hp, int attack, int defense, int magicPower, Weapon weapon) {
-			super(name, hp, attack, defense, weapon);
+		public Wizard(String name, int hp, int attack, int defense, int magicPower) {
+			super(name, hp, attack, defense);
 			this.magicPower = magicPower;
 		}
 

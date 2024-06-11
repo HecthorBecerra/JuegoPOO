@@ -1,6 +1,6 @@
 package domain;
 
-public class Champion {
+public abstract class Champion {
 	protected String name;
 	protected int hp;
 	protected int attack;
@@ -9,12 +9,12 @@ public class Champion {
 	protected Potion potion;
 
 
-	public Champion(String name, int hp, int attack, int defense, Weapon weapon) {
+	public Champion(String name, int hp, int attack, int defense) {
 		this.name = name;
 		this.hp = hp;
 		this.attack = attack;
 		this.defense = defense;
-		this.weapon = weapon;
+		this.weapon = elegirArma();
 	}
 
     public void takeDamage(int Damage){
@@ -54,6 +54,8 @@ public class Champion {
 	public int getHp() {
 		return hp;
 	}
+
+	public abstract Weapon elegirArma();
 
 }
 
